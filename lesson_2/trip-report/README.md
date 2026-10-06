@@ -49,7 +49,7 @@ python -m venv .venv
 Поставить зависимости:
 
 ```
-python -m pip install rich
+pip install -r requirements.txt
 ```
 
 Запустить программу:
