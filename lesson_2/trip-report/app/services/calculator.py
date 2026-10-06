@@ -19,15 +19,13 @@ def most_expensive_day(expenses):
         amount = item["amount"]
         daily_totals[day] = daily_totals.get(day, 0) + amount  
     expensive_day = max(daily_totals, key=daily_totals.get)
-    return expensive_day, daily_totals[expensive_day]
+    return [expensive_day, daily_totals[expensive_day]]
 
 def category_share(expenses, category):
     if not expenses:
         raise ValueError("список расходов пуст")
     if not category:
-        raise ValueError("категория пуста")
-    if not expenses[category]:
-        raise ValueError("нет категории в словаре")      
+        raise ValueError("категория пуста")    
     total = 0  
     category_total = 0 
     for item in expenses:
